@@ -13,7 +13,7 @@ import { distinctUntilChanged, switchAll, takeUntil, tap } from 'rxjs/operators'
 export class ZoneLessAsyncPipe implements PipeTransform, OnDestroy {
   private readonly destroy = new Subject();
   private readonly latestObservable = new Subject<Observable<any>>();
-  private latestValue!: any;
+  private latestValue: any;
 
   constructor(cdr: ChangeDetectorRef) {
     this.latestObservable
